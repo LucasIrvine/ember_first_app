@@ -1,0 +1,42 @@
+body {
+	padding: 2em;
+}
+nav ul {
+	list-style: none;
+	margin-left: -1em;
+	clear: both;
+}
+nav ul li {
+	float: left;
+	padding: 1em;
+}
+hr {
+	clear: both;
+}
+.mainContentWrap {
+	clear: both;
+}
+.goals {
+	color: red;
+	font-style: italic;
+	opacity: 0.6;
+	font-size:12px;
+}
+h2 a {
+	color: #666;
+	text-decoration: none;
+}
+h2 a:hover {
+	color: #444;
+	text-decoration: none;
+}
+.widgetContainer {
+	border: 1px solid #ccc;
+	border-radius: 0.50em;
+	margin: 0.50em 0 0.50em 1em;
+	width: 47.5%;
+	height: 380px;
+	float: left;
+	min-width: 380px;
+	/*box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);*/
+}

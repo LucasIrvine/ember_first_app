@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FutureSense Dashboard</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <h2>{{#linkTo 'index'}}Welcome to FutureSense.{{/linkTo}}</h2>
+    <nav>
+      <ul>
+        <li>{{#linkTo 'dashboard'}}Dashboard{{/linkTo}}</li>
+        <li>{{#linkTo 'socialIdx'}}Social Index{{/linkTo}}</li>
+        <li>{{#linkTo 'metricsComparison'}}Metrics Comparison{{/linkTo}}</li>
+        <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+      </ul>
+    </nav>
+    <hr />
+    <section class="mainContentWrap">
+      {{outlet}}
+    </section>
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="index">
+     <h4>Intro/Configuration</h4>
+      <p>Initial setup page and ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aliquid, sit iusto illum totam quae id tempore ad pariatur delectus doloribus consequuntur earum temporibus molestias quos quod ullam odit alias.</p>
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="about">
+    <h4>About</h4>
+    <p>This dashboard is using the following development tools:</p>
+    <ul>
+      {{#each model}}
+        <li>
+          <h5>{{techName}}</h5>
+          <small>{{{linkFormatted}}}</small>
+          <p>{{techInfo}}</p>
+          
+        </li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="dashboard">
+    <h4>Dashboard</h4>
+    <p>Click the view more link to see the widgets in more detail.</p>
+    <div class="goals">
+      <p>Goals for the page</p>
+      <ul>
+        <li>display social index component</li>
+        <li>display metrics comparison</li>
+        <li>Be able to change the data source</li>
+        <li>have that new data source display in the detailed views</li>
+      </ul>
+    </div>
+    <div class="widgetContainer"></div>
+    <div class="widgetContainer"></div>
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="socialIdx">
+    <h4>Social Index</h4>
+    <div class="goals">
+      <p>Goals for the page</p>
+      <ul>
+        <li>display responsive social index grid</li>
+        <li>be able to change the data source</li>
+        <li>have that new data source display in the dashboard</li>
+      </ul>
+    </div>
+    <div id="socialIndex"></div>
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="metricsComparison">
+    <h4>Metrics Comparison</h4>
+    <div class="goals">
+      <p>Goals for the page</p>
+      <ul>
+        <li>display responsive metrics comparison chart</li>
+        <li>be able to change the data source</li>
+        <li>have that new data source display in the dashboard</li>
+      </ul>
+    </div>
+    <div id="metricsComparison"></div>
+  </script>
+  
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.8.js"></script>
+  <script src="js/libs/ember-data-latest.js"></script>
+  <script src="js/libs/moment.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
